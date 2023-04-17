@@ -1,0 +1,495 @@
+body {
+  font-family: "Inter";
+}
+.valueFont {
+  font-family: Value-Serif-Regular, Halant, Vollkorn, Georgia, sans-serif;
+}
+/* THESE ARE THE STYLES TO THE NAVIGATION BAR */
+nav {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+nav:hover {
+  background-color: #faf5e9;
+}
+nav:hover div h3 a strong {
+  color: #009b4d;
+}
+nav:hover div button span i {
+  color: #009b4d;
+}
+nav:hover div ul li a {
+  color: #009b4d;
+}
+.navbar-nav li a:hover {
+  color: #009b4d !important;
+  border-bottom: 2px solid #009b4d;
+}
+.navbar-nav li a:focus {
+  color: #009b4d !important;
+  border-bottom: 2px solid #009b4d;
+}
+.sideNav {
+  background-color: #fbebce;
+}
+.sidebar {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 50px;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.sidebar .closebtn {
+  cursor: pointer;
+}
+.colour {
+  color: #fbebce;
+}
+.green4 {
+  color: #202721;
+}
+.ivory {
+  color: #faf5e9;
+}
+.yellow {
+  color: #ffcc00;
+}
+.green {
+  color: #009b4d;
+}
+.green2 {
+  color: #003400;
+}
+.bgyellow {
+  background-color: #ffcc00;
+  color: #009b4d;
+}
+.bgivory {
+  background-color: #faf5e9;
+}
+.yellow2 {
+  color: #fc0;
+}
+.linkcolor {
+  color: #fbebce;
+}
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+/* END OF NAVIGATION BAR STYLES  */
+
+/* THESE ARE THE STYLES TO THE GALLERY PAGE */
+.videoCover {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+.videoCover video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.videoCover .container {
+  position: relative;
+  z-index: 2;
+}
+.videoCover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+/* Media Query for devices withi coarse pointers and no hover functionality */
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+@media (pointer: coarse) and (hover: none) {
+  .videoCover {
+    background: url("/images/fire.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .videoCover video {
+    display: none;
+  }
+}
+.theme {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 3px solid #02060a;
+}
+
+@media screen and (max-width: 777px) {
+  .largescreen {
+    display: none;
+  }
+}
+@media screen and (min-width: 777px) {
+  #smallerscreens {
+    display: none;
+  }
+}
+button .carousel-control-next span:hover {
+  color: #fc0;
+}
+/* END OF GALLERY PAGE STYLES*/
+/*THESE ARE THE STYLES TO THE CONTACT PAGE*/
+.contactIndex {
+  background: url(images/Aboutpic.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.H3 {
+  font-size: 1rem;
+  letter-spacing: 0.04rem;
+  line-height: 1;
+  color: black;
+}
+.wrapper {
+  overflow: hidden;
+  border-radius: 1px;
+  box-shadow: 0 20px 40px -10px rgb(0 0 0 / 15%);
+}
+.icon {
+  margin-right: 7.5px;
+  border-radius: 50%;
+  color: white;
+}
+#contactPage {
+  background-color: #fbebce;
+}
+#contactForm {
+  background-color: #faf5e9;
+}
+
+.text {
+  color: #fff;
+}
+.formsection input {
+  border: 0;
+  outline: none;
+  border-bottom: 1.5px solid #003400;
+}
+textarea {
+  outline: none;
+  border: 0;
+  border-bottom: 1.2px solid #003400;
+}
+hr {
+  color: #003400;
+}
+.H1 {
+  line-height: 1.333;
+  letter-spacing: 0.01rem;
+  color: #003400;
+}
+@media screen and (min-width: 776px) {
+  .contactAddress {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 775px) {
+  .contactAddress {
+    height: 20rem;
+  }
+}
+/* END OF CONTACT PAGE STYLES */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+.white {
+  color: white;
+}
+.chocolate {
+  color: chocolate;
+}
+.black {
+  color: black;
+}
+.green3 {
+  color: green;
+}
+.aboutIndex {
+  background-image: url(images/Aboutpic.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+/* BEGIN WORLD WONDERS STYLES */
+section .wonderTitle {
+  font-family: "Felipa";
+  letter-spacing: 0.15rem;
+}
+.wonderHistory,
+.wonderSubtitle {
+  font-family: "Inter";
+}
+/* END STYLES */
+/*HOME PAGE STYLES*/
+.wondersLink:hover {
+  color: #009b4d;
+  background-color: #ffcc00;
+}
+.linkColour {
+  color: #fff;
+}
+.linkFont {
+  font-size: 1.1rem;
+}
+.linkNationFont {
+  font-size: 0.7rem;
+}
+div .monumentTag {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/*END HOME STYLES*/
+/*FOOTER STYLES*/
+#footer {
+  background-color: #000;
+  color: #fbebce;
+}
+#footer footer div ul li a:hover {
+  color: #fbebce;
+}
+#footer footer div ul li a:focus {
+  color: #faf5e9;
+}
+/*END FOOTER STYLES*/
+/*BEGIN ADVERT STYLES*/
+.section {
+  height: 100vh;
+}
+.section .section-center {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#booking {
+  font-family: "PT Sans", sans-serif;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.booking-form {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 6px;
+}
+
+.booking-form .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.booking-form .form-control {
+  background-color: #fff;
+  height: 50px;
+  color: #202721;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 40px;
+  padding: 0px 25px;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+  color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+  color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form .form-control::placeholder {
+  color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form input[type="date"].form-control:invalid {
+  color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.booking-form select.form-control + .select-arrow {
+  position: absolute;
+  right: 10px;
+  bottom: 6px;
+  width: 32px;
+  line-height: 32px;
+  height: 32px;
+  text-align: center;
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+}
+
+.booking-form select.form-control + .select-arrow:after {
+  content: "\279C";
+  display: block;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.booking-form .form-label {
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 24px;
+  height: 24px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.booking-form .form-checkbox input {
+  position: absolute !important;
+  margin-left: -9999px !important;
+  visibility: hidden !important;
+}
+
+.booking-form .form-checkbox label {
+  position: relative;
+  padding-top: 4px;
+  padding-left: 30px;
+  font-weight: 400;
+  color: #faf5e9;
+}
+
+.booking-form .form-checkbox label + label {
+  margin-left: 15px;
+}
+
+.booking-form .form-checkbox input + span {
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  background: #faf5e9;
+  border-radius: 50%;
+}
+
+.booking-form .form-checkbox input + span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: #fc0;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.booking-form .form-checkbox input:not(:checked) + span:after {
+  opacity: 0;
+}
+
+.booking-form .form-checkbox input:checked + span:after {
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+
+.booking-form .form-btn {
+  margin-top: 27px;
+}
+
+.booking-form .submit-btn {
+  color: #003400;
+  background-color: #fc0;
+  font-weight: 400;
+  height: 50px;
+  font-size: 14px;
+  border: none;
+  width: 100%;
+  border-radius: 40px;
+  text-transform: uppercase;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.booking-form .submit-btn:hover,
+.booking-form .submit-btn:focus {
+  opacity: 0.9;
+}
+
+/*END ADVERT STYLES*/
+/*BEGIN SITEMAP STYLES */
+.site {
+  background-color: #003400;
+  color: #ffcc00;
+  height: 100vh;
+}
+#pop {
+  text-align: center;
+  padding-top: 10px;
+  font-style: normal;
+  font-weight: 800;
+}
+#full {
+  font-style: normal;
+  font-weight: 600;
+  font-size: larger;
+}
+
+ul {
+  list-style-type: circle;
+}
+ul li::before {
+  color: coral;
+  display: inline-block;
+}
+/*END SITEMAP STYLES*/

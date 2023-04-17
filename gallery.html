@@ -1,0 +1,818 @@
+<div class="videoCover">
+  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+  <div class="overlay"></div>
+  <!-- The HTML5 video element that will create the background video on the header -->
+  <video
+    playsinline="playsinline"
+    autoplay="autoplay"
+    muted="muted"
+    loop="loop"
+  >
+    <source src="images/conodearita.mp4" type="video/mp4" />
+  </video>
+  <!-- The header content -->
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100">
+        <h1 class="text-uppercase">
+          <i class="bi bi-images fs-2 me-1 ivory"></i>
+          <span class="colour">Gallery</span>
+        </h1>
+        <p class="lead fs-6 colour ">
+          The gallery page of our monument website showcases stunning images and
+          videos of our monument, providing visitors with an immersive visual
+          experience. From breathtaking aerial views to intricate details of the
+          architecture, the gallery captures the essence of the monument and its
+          historical significance. Browse through our collection and discover
+          the beauty and grandeur of our iconic landmark
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<section  ng-controller="myCtrl">
+  <div
+  ng-repeat="gallery in mygallery"
+    class="container-fluid theme py-5"
+    style="background: url({{gallery.coverimg}});"
+  >
+    <div class="container-fluid row m-0 g-0 border-0">
+      <div class="col-md-3 linkcolor">
+       <h1 class="float-start ivory">
+        {{gallery.coltitle}}
+       </h1>
+       <span class="fs-6 float-start ">
+       {{gallery.colsubtext}}
+       </span>
+      </div>
+      <!--LARGE SCREENS-->
+      <div
+        class="col-md-9 carousel slide g-0 m-0 border-0 largescreen"
+        id="myCarousel{{$index}}"
+        data-bs-ride="carousel"
+      > 
+      <div class="row carousel-inner">
+          <div class="carousel-item active">
+            <ul class="row">
+            <li
+              class="col-md-6 list-unstyled m-0 g-0 border-0 "
+              style="
+                background: url({{gallery.image1}});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 16rem;
+              " data-bs-toggle="modal" data-bs-target="#firstModal{{$index}}">
+              <a href="" class="text-decoration-none linkcolor" >
+                <div>
+                  <span
+                    >{{gallery.title1}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6 list-unstyled m-0 g-0 border-0"
+            data-bs-toggle="modal"
+            data-bs-target="#secondModal{{$index}}"
+            style="
+            background: url({{gallery.image2}});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 16rem;
+          ">
+              <a href="" class="text-decoration-none linkcolor" >
+                <div>
+                  <span
+                    >{{gallery.title2}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6 list-unstyled m-0 g-0 border-0" 
+            data-bs-toggle="modal"
+            data-bs-target="#thirdModal{{$index}}" style="
+            background: url({{gallery.image3}});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 16rem;
+          ">
+              <a href="" class="text-decoration-none linkcolor">
+                <div>
+                  <span
+                    >{{gallery.title3}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li
+              class="col-md-6 list-unstyled m-0 g-0 border-0"  
+              data-bs-toggle="modal"
+              data-bs-target="#fourthModal{{$index}}"
+              style="
+                background: url({{gallery.image4}});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 16rem;
+              "
+            >
+              <a href="" class="text-decoration-none linkcolor">
+                <div>
+                  <span>{{gallery.title4}}</span>
+                </div>
+              </a>
+            </li>
+            </ul>
+          </div>
+          <div class="carousel-item">
+            <ul class="row">
+            <li
+              class="col-md-6 list-unstyled m-0 g-0 border-0"
+              data-bs-toggle="modal"
+              data-bs-target="#fifthModal{{$index}}"
+             style="
+                background: url({{gallery.image5}});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 16rem;
+              "
+            >
+              <a href="" class="text-decoration-none linkcolor">
+                <div>
+                  <span
+                    >{{gallery.title5}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6 list-unstyled m-0 g-0 border-0"
+            data-bs-toggle="modal"
+            data-bs-target="#sixthModal{{$index}}"
+            style="
+            background: url({{gallery.image6}});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 16rem;
+          ">
+              <a href="" class="text-decoration-none linkcolor">
+                <div>
+                  <span
+                    >{{gallery.title6}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6 list-unstyled m-0 g-0 border-0"
+            data-bs-toggle="modal"
+            data-bs-target="#seventhModal{{$index}}"
+            style="
+            background: url({{gallery.image7}});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 16rem;
+          ">
+              <a href="" class="text-decoration-none linkcolor" >
+                <div>
+                  <span
+                    >{{gallery.title7}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li
+              class="col-md-6 list-unstyled m-0 g-0 border-0"
+              data-bs-toggle="modal"
+              data-bs-target="#eighthModal{{$index}}"
+              style="
+                background: url({{gallery.image8}});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 16rem;
+              "
+            >
+              <a href="" class="text-decoration-none linkcolor">
+                <div>
+                  <span
+                    >{{gallery.title8}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            </ul>
+          </div>
+        </ul>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#myCarousel{{$index}}"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon fs-1 colour" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.25); "></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#myCarousel{{$index}}"
+          data-bs-slide="next"
+          
+        >
+          <span class="carousel-control-next-icon fs-1 colour" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5); "></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!--SMALLER SCREENS-->
+    <div
+        class="col-md-9 g-0 m-0 border-0"
+        id="smallerscreens"
+      >
+        <div class="row ">
+          <div>
+            <ul class="row">
+              <li
+              class="col-md-6 list-unstyled m-0 g-0 border-0"
+              data-bs-toggle="modal"
+              data-bs-target="#firstModal{{$index}}"
+              style="
+                background: url({{gallery.image1}});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 16rem;
+              "
+            >
+              <a href="" class="text-decoration-none linkcolor" >
+                <div>
+                  <span class="fw-semibold"
+                    >{{gallery.title1}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6 list-unstyled m-0 g-0 border-0"
+            data-bs-toggle="modal"
+            data-bs-target="#secondModal{{$index}}"
+            style="
+            background: url({{gallery.image2}});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 16rem;
+          ">
+              <a href="" class="text-decoration-none linkcolor" >
+                <div>
+                  <span class="fw-semibold"
+                    >{{gallery.title2}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6 list-unstyled m-0 g-0 border-0"
+            data-bs-toggle="modal"
+            data-bs-target="#thirdModal{{$index}}"
+            style="
+            background: url({{gallery.image3}});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 16rem;
+          ">
+              <a href="" class="text-decoration-none linkcolor" >
+                <div>
+                  <span class="fw-semibold"
+                    >{{gallery.title3}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li
+              class="col-md-6 list-unstyled m-0 g-0 border-0"
+              data-bs-toggle="modal"
+              data-bs-target="#fourthModal{{$index}}"
+              style="
+                background: url({{gallery.image4}});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 16rem;
+              "
+            >
+              <a href="" class="text-decoration-none  linkcolor ">
+                <div>
+                  <span class="fw-semibold"
+                    >{{gallery.title4}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="row">
+            <li
+              class="col-md-6 list-unstyled m-0 g-0 border-0"
+              data-bs-toggle="modal"
+              data-bs-target="#fifthModal{{$index}}"
+              style="
+                background: url({{gallery.image5}});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 16rem;
+              "
+            >
+              <a href="" class="text-decoration-none  linkcolor ">
+                <div>
+                  <span class="fw-semibold"
+                    >{{gallery.title5}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6 list-unstyled m-0 g-0 border-0"
+            data-bs-toggle="modal"
+            data-bs-target="#sixthModal{{$index}}"
+            style="
+            background: url({{gallery.image6}});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 16rem;
+          ">
+              <a href="" class="text-decoration-none linkcolor" >
+                <div>
+                  <span class="fw-semibold"
+                    >{{gallery.title6}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6 list-unstyled m-0 g-0 border-0"
+            data-bs-toggle="modal"
+            data-bs-target="#seventhModal{{$index}}"
+            style="
+            background: url({{gallery.image7}});
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 16rem;
+          ">
+              <a href="" class="text-decoration-none linkcolor" >
+                <div>
+                  <span class="fw-semibold"
+                    >{{gallery.title7}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            <li
+              class="col-md-6 list-unstyled m-0 g-0 border-0"
+              data-bs-toggle="modal"
+              data-bs-target="#eighthModal{{$index}}"
+              style="
+                background: url({{gallery.image8}});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 16rem;
+              "
+            >
+              <a href="" class="text-decoration-none linkcolor" >
+                <div>
+                  <span class="fw-semibold"
+                    >{{gallery.title8}}</span
+                  >
+                </div>
+              </a>
+            </li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+                <!--First Modal-->
+                <div
+                class="modal fade"
+                id="firstModal{{$index}}"
+                tabindex="-1"
+                 aria-hidden="true"
+                >
+                            <div class="modal-dialog modal-fullscreen">
+                              <div class="modal-content rounded-0 outline-0">
+                                <div class="">
+                                  <button
+                                    type="button"
+                                    class="btn-close float-end shadow-none"
+                                     data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                  ></button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="container">
+                                    <span class="fs-2">{{gallery.title1}}</span> 
+                                    <hr class="m-0 g-0 p-0 w-75"> 
+                                    <i class="m-0 g-0 border-0 p-0">{{gallery.location1}}</i>
+                                  </div>
+                                  <div class="container">
+                                    <p class="py-3 fs-5">{{gallery.history1}}
+                                    </p>
+                                  </div>  
+                                </div>
+                                <div class="modal-footer">
+                                  <i class="bi bi-download fs-4"></i>
+                                  <div class="btn-group">
+                                    <a href="{{gallery.pdf1}}" class="text-decoration-none btn-group " download>
+                                      <button
+                                      type="button"
+                                      class="btn btn-sm btn-outline-secondary"
+                                    >
+                                      PDF
+                                    </button>
+                                  </a>
+                                  <a href="{{}}" class="text-decoration-none btn-group" download></a>
+                                      <button
+                                      type="button"
+                                      class="btn btn-sm btn-outline-secondary"
+                                    >
+                                      Word
+                                    </button>
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+              </div>
+            <!--Second Modal-->
+            <div
+            class="modal fade"
+            id="secondModal{{$index}}"
+            tabindex="-1"
+            aria-hidden="true"
+            >
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content rounded-0 outline-0">
+                <div class="">
+                  <button
+                    type="button"
+                    class="btn-close float-end shadow-none"
+                     data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <span class="fs-2">{{gallery.title2}}</span> 
+                    <hr class="m-0 g-0 p-0 w-75"> 
+                    <i class="m-0 g-0 border-0 p-0">{{gallery.location2}}</i>
+                  </div>
+                  <div class="container">
+                    <p class="py-3 fs-5">{{gallery.history2}}
+                    </p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <i class="bi bi-download fs-4"></i>
+                  <div class="btn-group">
+                    <a href="{{gallery.pdf2}}" class="text-decoration-none btn-group" download>
+                      <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      PDF
+                    </button>
+                  </a>
+                    <a href="" class="text-decoration-none btn-group">
+                      <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Word
+                    </button>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!--third  modal-->
+            <div
+            class="modal fade"
+            id="thirdModal{{$index}}"
+            tabindex="-1"
+            aria-hidden="true"
+            >
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content rounded-0 outline-0">
+                <div class="">
+                  <button
+                    type="button"
+                    class="btn-close float-end shadow-none"
+                     data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <span class="fs-2">{{gallery.title3}}</span> 
+                    <hr class="m-0 g-0 p-0 w-75"> 
+                    <i class="m-0 g-0 border-0 p-0">{{gallery.location3}}</i>
+                  </div>
+                  <div class="container">
+                    <p class="py-3 fs-5">{{gallery.history3}}
+                    </p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <i class="bi bi-download fs-4"></i>
+                  <div class="btn-group">
+                   <a href="{{gallery.pdf3}}" class="text-decoration-none btn-group" download>
+                    <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    PDF
+                  </button>
+                </a>
+                    <a href="" class="text-decoration-none btn-group" >
+                      <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Word
+                    </button>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!--fourth modal-->
+            <div
+            class="modal fade"
+            id="fourthModal{{$index}}"
+            tabindex="-1"
+            aria-hidden="true"
+            >
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content rounded-0 outline-0">
+                <div class="">
+                  <button
+                    type="button"
+                    class="btn-close float-end shadow-none"
+                     data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <span class="fs-2">{{gallery.title4}}</span> 
+                    <hr class="m-0 g-0 p-0 w-75"> 
+                    <i class="m-0 g-0 border-0 p-0">{{gallery.location4}}</i>
+                  </div>
+                  <div class="container">
+                    <p class="py-3 fs-5">{{gallery.history4}}
+                    </p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <i class="bi bi-download fs-4"></i>
+                  <div class="btn-group">
+                    <a href="{{gallery.pdf4}}" class="text-decoration-none btn-group" download>
+                      <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      PDF
+                    </button>
+                  </a>
+                    <a href="" class="text-decoration-none btn-group">
+                      <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Word
+                    </button>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!--Fifth Modal-->
+            <div
+            class="modal fade"
+            id="fifthModal{{$index}}"
+            tabindex="-1"
+            aria-hidden="true"
+            >
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content rounded-0 outline-0">
+                <div class="">
+                  <button
+                    type="button"
+                    class="btn-close float-end shadow-none"
+                     data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <span class="fs-2">{{gallery.title5}}</span> 
+                    <hr class="m-0 g-0 p-0 w-75"> 
+                    <i class="m-0 g-0 border-0 p-0">{{gallery.location5}}</i>
+                  </div>
+                  <div class="container">
+                    <p class="py-3 fs-5">{{gallery.history5}}
+                    </p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <i class="bi bi-download fs-4"></i>
+                  <div class="btn-group">
+                    <a href="{{gallery.pdf5}}" class="text-decoration-none btn-group" download>
+                      <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      PDF
+                    </button>
+                  </a>
+                    <a href="" class="text-decoration-none btn-group">
+                      <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Word
+                    </button>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!--Sixth Modal-->
+            <div
+            class="modal fade"
+            id="sixthModal{{$index}}"
+            tabindex="-1"
+            aria-hidden="true"
+            >
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content rounded-0 outline-0">
+                <div class="">
+                  <button
+                    type="button"
+                    class="btn-close float-end shadow-none"
+                     data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <span class="fs-2">{{gallery.title6}}</span> 
+                    <hr class="m-0 g-0 p-0 w-75"> 
+                    <i class="m-0 g-0 border-0 p-0">{{gallery.location6}}</i>
+                  </div>
+                  <div class="container">
+                    <p class="py-3 fs-5">{{gallery.history6}}
+                    </p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <i class="bi bi-download fs-4"></i>
+                  <div class="btn-group">
+                    <a href="{{gallery.pdf6}}" class="text-decoration-none btn-group" download>
+                      <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      PDF
+                    </button>
+                  </a>
+                    <a href="" class="text-decoration-none btn-group">
+                      <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Word
+                    </button>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!--Seventh modal-->
+            <div
+            class="modal fade"
+            id="seventhModal{{$index}}"
+            tabindex="-1"
+            aria-hidden="true"
+            >
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content rounded-0 outline-0">
+                <div class="">
+                  <button
+                    type="button"
+                    class="btn-close float-end shadow-none"
+                     data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <span class="fs-2">{{gallery.title7}}</span> 
+                    <hr class="m-0 g-0 p-0 w-75"> 
+                    <i class="m-0 g-0 border-0 p-0">{{gallery.location7}}</i>
+                  </div>
+                  <div class="container">
+                    <p class="py-3 fs-5">{{gallery.history7}}
+                    </p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <i class="bi bi-download fs-4"></i>
+                  <div class="btn-group">
+                    <a href="{{gallery.pdf7}}" class="text-decoration-none btn-group" download>
+                      <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      PDF
+                    </button>
+                  </a>
+                    <a href="" class="text-decoration-none btn-group">
+                      <button
+                      type="button"
+                      class="btn btn-sm btn-outline-secondary"
+                    >
+                      Word
+                    </button>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!--eighth modal-->
+            <div
+            class="modal fade"
+            id="eighthModal{{$index}}"
+            tabindex="-1"
+            aria-hidden="true"
+            >
+            <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0 outline-0">
+              <div class="">
+                <button
+                  type="button"
+                  class="btn-close float-end shadow-none"
+                   data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <span class="fs-2">{{gallery.title8}}</span> 
+                  <hr class="m-0 g-0 p-0 w-75"> 
+                  <i class="m-0 g-0 border-0 p-0">{{gallery.location8}}</i>
+                </div>
+                <div class="container">
+                  <p class="py-3 fs-5">{{gallery.history8}}
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <i class="bi bi-download fs-4"></i>
+                <div class="btn-group">
+                <a href="{{gallery.pdf8}}" class="text-decoration-none btn-group" download>
+                <button
+                type="button"
+                 class="btn btn-sm btn-outline-secondary"
+                >
+                PDF
+                </button>
+              </a>
+                  <a href="" class="text-decoration-none btn-group">
+                    <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    Word
+                  </button>
+                </a>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+  </div>
+</section>
